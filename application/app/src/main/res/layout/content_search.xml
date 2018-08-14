@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="cs.b07.travelagency.SearchActivity"
+    tools:showIn="@layout/activity_search"
+    android:background="@drawable/background">
+
+
+    <TextView android:text="@string/search_hint"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_blue"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        android:id="@+id/search_button"
+        android:onClick="search"
+        android:layout_below="@+id/check_direct_flight"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/from"
+        android:id="@+id/textView2"
+        android:textSize="8pt"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to"
+        android:id="@+id/textView3"
+        android:textSize="8pt"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="95dp" />
+
+    <EditText
+        android:hint="@string/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/origin_field"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView2"
+        android:textColor="@color/dark_blue"/>
+
+    <EditText
+        android:hint="@string/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/destination_field"
+        android:layout_below="@+id/origin_field"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView2"
+        android:textColor="@color/dark_blue"
+        />
+
+    <EditText
+        android:hint="@string/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_field"
+        android:layout_below="@+id/destination_field"
+        android:layout_alignStart="@+id/destination_field"
+        android:layout_toStartOf="@+id/select_date_button"
+        android:inputType="date"
+        android:focusable="false"
+        android:textColor="@color/dark_blue"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:textSize="8pt"
+        android:layout_marginTop="140dp"
+        android:id="@+id/textView4"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/select_date_button"
+        android:text="@string/select_date_button"
+        android:layout_below="@+id/destination_field"
+        android:layout_alignParentEnd="true"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switch_text"
+        android:id="@+id/check_direct_flight"
+        android:layout_below="@+id/select_date_button"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/dark_blue"
+        android:checked="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_failure"
+        android:layout_marginStart="26dp"
+        android:layout_below="@+id/check_direct_flight"
+        android:layout_toEndOf="@+id/search_button" />
+
+
+</RelativeLayout>

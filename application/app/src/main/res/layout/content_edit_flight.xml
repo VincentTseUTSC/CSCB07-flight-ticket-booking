@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="cs.b07.travelagency.EditFlightActivity"
+    tools:showIn="@layout/activity_edit_flight"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/flight_number"
+        android:id="@+id/textView5"
+        android:layout_alignBaseline="@+id/flight_number_field"
+        android:layout_alignBottom="@+id/flight_number_field"
+        android:layout_toStartOf="@+id/flight_number_field" />
+
+    <EditText
+        android:hint="@string/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/flight_number_field"
+        android:textColor="@color/dark_blue"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView6" />
+
+    <EditText
+        android:hint="@string/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="@color/dark_blue"
+        android:id="@+id/departure_field"
+        android:layout_below="@+id/flight_number_field"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/flight_number_field" />
+
+    <EditText
+        android:hint="@string/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/arrival_field"
+        android:layout_below="@+id/departure_field"
+        android:layout_alignEnd="@+id/departure_field"
+        android:layout_alignStart="@+id/departure_field" />
+
+    <EditText
+        android:hint="@string/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/airline_field"
+        android:textColor="@color/dark_blue"
+        android:layout_below="@+id/arrival_field"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView9"
+        android:layout_alignStart="@+id/arrival_field" />
+
+    <EditText
+        android:hint="@string/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/origin_field_2"
+        android:textColor="@color/dark_blue"
+        android:layout_below="@+id/airline_field"
+        android:layout_alignEnd="@+id/airline_field"
+        android:layout_toEndOf="@+id/textView9"
+        android:layout_alignStart="@+id/airline_field" />
+
+    <EditText
+        android:hint="@string/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/destination_field_2"
+        android:textColor="@color/dark_blue"
+        android:layout_below="@+id/origin_field_2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/origin_field_2" />
+
+    <TextView
+        android:hint="@string/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/departure"
+        android:id="@+id/textView6"
+        android:layout_alignBaseline="@+id/departure_field"
+        android:layout_alignBottom="@+id/departure_field"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/arrival"
+        android:id="@+id/textView7"
+        android:layout_alignBaseline="@+id/arrival_field"
+        android:layout_alignBottom="@+id/arrival_field"
+        android:layout_toStartOf="@+id/arrival_field" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/airline"
+        android:id="@+id/textView8"
+        android:layout_alignBaseline="@+id/airline_field"
+        android:layout_alignBottom="@+id/airline_field"
+        android:layout_toStartOf="@+id/airline_field" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/origin"
+        android:id="@+id/textView9"
+        android:layout_alignBaseline="@+id/origin_field_2"
+        android:layout_alignBottom="@+id/origin_field_2"
+        android:layout_toStartOf="@+id/arrival_field" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/destination"
+        android:id="@+id/textView10"
+        android:layout_alignBaseline="@+id/destination_field_2"
+        android:layout_alignBottom="@+id/destination_field_2"
+        android:layout_toStartOf="@+id/destination_field_2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_change"
+        android:id="@+id/saveFlightChanges"
+        android:onClick="editFlight"
+        android:layout_below="@+id/seats_field"
+        android:layout_alignParentEnd="true"/>
+
+    <EditText
+        android:hint="@string/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price_field"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/dark_blue"
+        android:layout_below="@+id/destination_field_2"
+        android:layout_toEndOf="@+id/textView8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price"
+        android:id="@+id/textView12"
+        android:layout_alignBaseline="@+id/price_field"
+        android:layout_alignBottom="@+id/price_field"
+        android:layout_alignEnd="@+id/textView10" />
+
+    <EditText
+        android:hint="@string/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/seats_field"
+        android:layout_below="@+id/price_field"
+        android:textColor="@color/dark_blue"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/number_seats"
+        android:id="@+id/textView13"
+        android:layout_alignBaseline="@+id/seats_field"
+        android:layout_alignBottom="@+id/seats_field"
+        android:layout_toStartOf="@+id/seats_field" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_flight"
+        android:hint="@string/edit_flight_hint"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/search_flight_btn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        android:id="@+id/search_flight_btn"
+        android:onClick="searchFlightNum"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
